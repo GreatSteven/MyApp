@@ -15,6 +15,8 @@
 		B09601381D9CD3EF0013BB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09601361D9CD3EF0013BB36 /* LaunchScreen.storyboard */; };
 		B09601431D9CD3EF0013BB36 /* MyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B09601421D9CD3EF0013BB36 /* MyAppTests.m */; };
 		B096014E1D9CD3EF0013BB36 /* MyAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B096014D1D9CD3EF0013BB36 /* MyAppUITests.m */; };
+		B09601601D9CD6910013BB36 /* GCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B096015F1D9CD6910013BB36 /* GCStarView.m */; };
+		B09601661D9CD7000013BB36 /* GCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09601651D9CD7000013BB36 /* GCBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		B09601491D9CD3EF0013BB36 /* MyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B096014D1D9CD3EF0013BB36 /* MyAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAppUITests.m; sourceTree = "<group>"; };
 		B096014F1D9CD3EF0013BB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B096015E1D9CD6910013BB36 /* GCStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStarView.h; sourceTree = "<group>"; };
+		B096015F1D9CD6910013BB36 /* GCStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStarView.m; sourceTree = "<group>"; };
+		B09601641D9CD7000013BB36 /* GCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCBaseViewController.h; sourceTree = "<group>"; };
+		B09601651D9CD7000013BB36 /* GCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		B09601271D9CD3EE0013BB36 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				B096015B1D9CD64F0013BB36 /* Main */,
+				B096015C1D9CD64F0013BB36 /* UI */,
 				B096012B1D9CD3EE0013BB36 /* AppDelegate.h */,
 				B096012C1D9CD3EE0013BB36 /* AppDelegate.m */,
 				B096012E1D9CD3EE0013BB36 /* ViewController.h */,
@@ -138,6 +146,56 @@
 				B096014F1D9CD3EF0013BB36 /* Info.plist */,
 			);
 			path = MyAppUITests;
+			sourceTree = "<group>";
+		};
+		B096015B1D9CD64F0013BB36 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B09601611D9CD6F10013BB36 /* Controller */,
+				B09601621D9CD6F10013BB36 /* Model */,
+				B09601631D9CD6F10013BB36 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B096015C1D9CD64F0013BB36 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B096015D1D9CD66C0013BB36 /* StarView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B096015D1D9CD66C0013BB36 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				B096015E1D9CD6910013BB36 /* GCStarView.h */,
+				B096015F1D9CD6910013BB36 /* GCStarView.m */,
+			);
+			path = StarView;
+			sourceTree = "<group>";
+		};
+		B09601611D9CD6F10013BB36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B09601641D9CD7000013BB36 /* GCBaseViewController.h */,
+				B09601651D9CD7000013BB36 /* GCBaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B09601621D9CD6F10013BB36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B09601631D9CD6F10013BB36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +260,7 @@
 		B096011D1D9CD3EE0013BB36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GC;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "陈诚";
 				TargetAttributes = {
@@ -275,6 +334,8 @@
 			files = (
 				B09601301D9CD3EE0013BB36 /* ViewController.m in Sources */,
 				B096012D1D9CD3EE0013BB36 /* AppDelegate.m in Sources */,
+				B09601601D9CD6910013BB36 /* GCStarView.m in Sources */,
+				B09601661D9CD7000013BB36 /* GCBaseViewController.m in Sources */,
 				B096012A1D9CD3EE0013BB36 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Steven.MyApp;
@@ -435,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Steven.MyApp;
