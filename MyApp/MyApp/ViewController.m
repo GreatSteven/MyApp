@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GCStarView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    GCStarView *starView = [[GCStarView alloc] initWithFrame:CGRectMake(0, 0, 200, 21)];
+    starView.center = self.view.center;
+    starView.scorePercent = 3;// 设置默认为选中3颗❤️
+    [self.view addSubview:starView];
 }
 
 
